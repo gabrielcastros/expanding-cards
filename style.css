@@ -1,0 +1,75 @@
+* {
+    box-sizing: border-box;
+    font-family: 'afacad flux', sans-serif;
+}
+
+html, body {
+    height: 100%;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    background-color: lightgray;
+    overflow-x: hidden;  /* Previne o scroll horizontal */
+}
+
+.container {
+    padding: 0;
+    margin: 0;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;  /* Ajuste do padding para não criar espaço excessivo */
+    max-width: calc(100vw - 40px);
+    overflow: hidden;
+}
+
+.panel {
+    margin: 10px;
+    width: 7vw;
+    height: 80vh;
+    border-radius: 50px;
+    position: relative;
+    max-width: calc(100vw - 40px);
+    max-height: 100vh;
+    overflow: hidden;
+    transition: all 1s ease;
+}
+
+.panel.active {
+    display: flex;
+    margin: 10px;
+    padding-left: 30px;
+    height: 80vh;
+    width: 60vw;
+    border-radius: 50px;
+    max-width: calc(100vw - 40px);
+    max-height: 100vh;
+    overflow: hidden;
+    background-size: cover; 
+}
+
+.panel.active h3 {
+    font-size: 1.7rem;
+    font-weight: 400;
+    color: white;
+    position: absolute;
+    left: 30px;
+    bottom: 0;
+}
+
+.panel.panel:hover {
+    cursor: pointer;
+    transform: scale(1.01);
+    transition: all 0.4s ease;
+}
+
+.panel h3 {
+    display: none;
+}
+
+.panel.active h3 {
+    display: block;
+    text-shadow: 30px;
+}
